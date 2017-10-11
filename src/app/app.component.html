@@ -1,0 +1,7 @@
+<h1>Search field</h1>
+<app-search [(text)]="text" [resultsProvider]="results">
+    <ng-template let-result="result" app-search-template>
+        {{result}}
+    </ng-template>
+</app-search>
+

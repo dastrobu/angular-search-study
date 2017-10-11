@@ -1,0 +1,15 @@
+<div>
+    <input [(ngModel)]="text" type="text">
+    <div *ngIf="results.length > 0" style="background-color: lightblue; width: 100px; position: absolute">
+        <ul>
+            <ng-container *ngFor="let result of results">
+                <li>
+                    <ng-template [ngTemplateOutlet]="template"
+                                 [ngOutletContext]="{result: result}">
+                    </ng-template>
+                </li>
+            </ng-container>
+        </ul>
+    </div>
+</div>
+
